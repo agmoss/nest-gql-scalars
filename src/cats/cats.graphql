@@ -1,0 +1,48 @@
+scalar JSON
+scalar EMAIL
+
+type Query {
+  cats: [Cat]
+  cat(id: ID!): Cat
+  # {
+  #   jsonCat
+  # }
+  jsonCats: JSON
+}
+
+type Mutation {
+  # mutation createCat($createCatInput:CreateCatInput){
+  #   createCat(createCatInput: $createCatInput){
+  #       id
+  #       age
+  #   }
+  # }
+  createCat(createCatInput: CreateCatInput): Cat
+}
+
+type Subscription {
+  catCreated: Cat
+}
+
+type Owner {
+  id: Int!
+  name: String!
+  age: Int
+  cats: [Cat!]
+}
+
+type Cat {
+  id: Int
+  name: String
+  age: Int
+  owner: Owner
+  email: EMAIL
+}
+"""
+Test comment
+"""
+input CreateCatInput {
+  name: String
+  age: Int
+  email: EMAIL
+}
