@@ -1,10 +1,12 @@
 # `gql-scalar-testing`
 
-> Integration of scalars from `graphql-scalars` with `@nestjs/graphql` (schema first)
+> Integration of scalars from [`graphql-scalars`](https://github.com/Urigo/graphql-scalars) with [`@nestjs/graphql`](https://github.com/nestjs/graphql) (schema first).
+
+The sample code is from [`12-graphql-schema-first`](https://github.com/nestjs/nest/tree/master/sample/12-graphql-schema-first)
 
 ### Installation
 
-`npm install`
+`yarn install`
 
 ### Graphql Playground
 
